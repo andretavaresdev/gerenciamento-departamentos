@@ -35,7 +35,7 @@ public class DepartamentoController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Departamento> deletar(@PathVariable Long id){
+    public ResponseEntity<Void> deletar(@PathVariable Long id){
         service.deletar(id);
         return ResponseEntity.noContent().build();
     }
